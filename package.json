@@ -9,6 +9,7 @@
     "serialize",
     "serialization"
   ],
+  "repository": "smiley325/marshal-ts",
   "main": "./lib/index.js",
   "module": "./lib/index.js",
   "files": [
