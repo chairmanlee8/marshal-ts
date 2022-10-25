@@ -2,7 +2,7 @@
   "name": "marshal-ts",
   "type": "module",
   "version": "1.0.0",
-  "description": "JavaScript marshalling that Just Works(tm). Marshalling is like serialization, but you get the object identity (typeof, instanceof, methods) back on the other end. Supports circular references too!",
+  "description": "Tiny JavaScript marshalling library with zero dependencies. Marshalling is like serialization, but you get the object identity (typeof, instanceof, methods) back on the other end. Supports circular references too!",
   "keywords": [
     "marshal",
     "marshalling",
