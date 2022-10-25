@@ -15,6 +15,8 @@ npm install marshal-ts
 ### Motivating Example
 
 ```ts
+import { Marshal } from 'marshal-ts';
+
 class Foo {
   constructor(public hello: string, private world: string) {}
   sayHello(): string {
