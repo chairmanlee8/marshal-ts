@@ -68,4 +68,6 @@ reconstructedBar instanceof Bar; // true
 
 ## API
 
-TODO
+## Similar Works
+
+* https://github.com/jed/lave
