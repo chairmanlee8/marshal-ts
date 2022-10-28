@@ -1,8 +1,9 @@
 # marshal-ts
 
-Tiny JavaScript marshalling library with zero dependencies. Marshalling is like 
-serialization, but you get the object identity (typeof, instanceof, methods) 
-back on the other end. Supports circular references too!
+Tiny JavaScript marshalling library with zero dependencies. It's like Python's
+[pickle] but for JavaScript. Marshalling is like serialization, but you get the 
+object identity (typeof, instanceof, methods) back on the other end. Supports 
+circular references too!
 
 ## Install
 
