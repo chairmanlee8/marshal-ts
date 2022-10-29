@@ -187,18 +187,27 @@ test('DefaultMap', () => {
   // needs to be included in [functions], but at least it's possible.
   const f = (key: string) => key.length;
   const x = new mnemonist.DefaultMap<string, number>(f);
-  const marshal = new Marshal({ prototypes: [mnemonist.DefaultMap], functions: [f] });
+  const marshal = new Marshal({
+    prototypes: [mnemonist.DefaultMap],
+    functions: [f],
+  });
 
   // NB: just to prove that the functions don't have to be literally the same,
   // only the same definition
   const g = (key: string) => key.length;
-  const unmarshal = new Marshal({ prototypes: [mnemonist.DefaultMap], functions: [g] });
+  const unmarshal = new Marshal({
+    prototypes: [mnemonist.DefaultMap],
+    functions: [g],
+  });
 
   x.set('hello', 1337);
   x.get('world'); // should be set to 5 via default factory
-  expect([...x.entries()]).toEqual([['hello', 1337], ['world', 5]]);
+  expect([...x.entries()]).toEqual([
+    ['hello', 1337],
+    ['world', 5],
+  ]);
 
   const xcopy = unmarshal.unmarshal(marshal.marshal(x)) as typeof x;
   expect([...x.entries()]).toEqual([...xcopy.entries()]);
   expect(xcopy.get('same factory')).toEqual(12);
-})
+});
